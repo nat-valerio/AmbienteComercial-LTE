@@ -330,39 +330,23 @@
                   </div> <!-- /.form-group -->
                 </div> <!-- /.col -->
               </div> <!-- /.row -->
-
+            
               <div class="row">
-                <div class="col-12 col-sm-6">
-                  <div class="form-group">
-                    <label></label>
-                    
-                  </div> <!-- /.form-group -->
-                </div> <!-- /.col -->
-                
                 <div class="col-12 col-sm-6">
                   <div class="form-group">
                     <label>E-mail</label>
-                    
-                  </div> <!-- /.form-group -->
-                </div> <!-- /.col -->
-              </div> <!-- /.row -->
-
-              <div class="row">
-                <div class="col-12 col-sm-6">
-                  <div class="form-group">
-                    <label></label>
-                    
+                    <input type="email" name="emaillab" id="emaillab" class="form-control shadow-sm" required>
                   </div> <!-- /.form-group -->
                 </div> <!-- /.col -->
                 
                 <div class="col-12 col-sm-6">
                   <div class="form-group">
-                    <label></label>
-                    
+                    <label>Início das atividades</label>
+                    <input type="text" class="form-control data shadow-sm" name="iniciolab" id="inic-ativ"
+                            placeholder="Digite somente os números" required>
                   </div> <!-- /.form-group -->
                 </div> <!-- /.col -->
               </div> <!-- /.row -->
-
             </div>
 
             <!-- /.card-body -->
@@ -388,14 +372,14 @@
 
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Código do cliente</label>
-                    <input type="text" name="cdcliente" class="form-control shadow-sm">
+                    <label>Nome completo</label>
+                    <input type="text" class="form-control maiuscula shadow-sm" name="nomec" id="nome-comp1" required>
                   </div>
                   <!-- /.form-group -->
 
                   <div class="form-group">
-                    <label>Vendedor</label>
-                    <input type="text" name="vendedor" class="form-control shadow-sm">
+                    <label>E-mail</label>
+                    <input type="email" name="emailc" id="email1" class="form-control shadow-sm" required>
                   </div>
                   <!-- /.form-group -->
                 </div>
@@ -403,12 +387,13 @@
                 <!-- /.col -->
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Aprovador</label>
-                    <input type="text" name="aprovador" class="form-control shadow-sm">
+                    <label>Celular</label>
+                    <input type="text" class="form-control cel shadow-sm" name="celc" id="celular1"
+                      placeholder="Digite somente os números" required>
                   </div>
                   <!-- /.form-group -->
                   <div class="form-group">
-                    <label>Razão social</label>
+                    <label>Função</label>
                     <input type="text" name="rsocial" id="razao" class="form-control shadow-sm">
                   </div>
                   <!-- /.form-group -->
@@ -416,46 +401,8 @@
                 <!-- /.col -->
               </div>
               <!-- /.row -->
-  
-              <h5>Custom Color Variants</h5>
-              <div class="row">
-                <div class="col-12 col-sm-6">
-                  <div class="form-group">
-                    <label>Minimal (.select2-danger)</label>
-                    <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" style="width: 100%;">
-                      <option selected="selected">Alabama</option>
-                      <option>Alaska</option>
-                      <option>California</option>
-                      <option>Delaware</option>
-                      <option>Tennessee</option>
-                      <option>Texas</option>
-                      <option>Washington</option>
-                    </select>
-                  </div>
-                  <!-- /.form-group -->
-                </div>
-                <!-- /.col -->
-                <div class="col-12 col-sm-6">
-                  <div class="form-group">
-                    <label>Multiple (.select2-purple)</label>
-                    <div class="select2-purple">
-                      <select class="select2" multiple="multiple" data-placeholder="Select a State" data-dropdown-css-class="select2-purple" style="width: 100%;">
-                        <option>Alabama</option>
-                        <option>Alaska</option>
-                        <option>California</option>
-                        <option>Delaware</option>
-                        <option>Tennessee</option>
-                        <option>Texas</option>
-                        <option>Washington</option>
-                      </select>
-                    </div>
-                  </div>
-                  <!-- /.form-group -->
-                </div>
-                <!-- /.col -->
-              </div>
-              <!-- /.row -->
             </div>
+
             <!-- /.card-body -->
             <div class="card-footer">
               Visit <a href="https://select2.github.io/">Select2 documentation</a> for more examples and information about
@@ -478,58 +425,37 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Código do cliente</label>
-                    <input type="text" name="cdcliente" class="form-control shadow-sm">
+                    <label>Endereço de cobrança</label>
+                    <input type="text" class="form-control maiuscula shadow-sm" name="end-cob" id="end-cob"
+                                required>
                   </div>
                   <!-- /.form-group -->
                   <div class="form-group">
-                    <label>Disabled</label>
-                    <select class="form-control select2" disabled="disabled" style="width: 100%;">
-                      <option selected="selected">Alabama</option>
-                      <option>Alaska</option>
-                      <option>California</option>
-                      <option>Delaware</option>
-                      <option>Tennessee</option>
-                      <option>Texas</option>
-                      <option>Washington</option>
-                    </select>
+                    <label>Bairro</label>
+                    <input type="text" class="form-control maiuscula shadow-sm" name="bairro-dad" id="bairro-dad"
+                                required>
                   </div>
                   <!-- /.form-group -->
                 </div>
                 <!-- /.col -->
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Multiple</label>
-                    <select class="select2" multiple="multiple" data-placeholder="Select a State" style="width: 100%;">
-                      <option>Alabama</option>
-                      <option>Alaska</option>
-                      <option>California</option>
-                      <option>Delaware</option>
-                      <option>Tennessee</option>
-                      <option>Texas</option>
-                      <option>Washington</option>
-                    </select>
+                    <label>CEP</label>
+                    <input type="text" name="cepcob" id="cep-dad" class="form-control cep shadow-sm"
+                                placeholder="Digite somente os números" required>
                   </div>
                   <!-- /.form-group -->
                   <div class="form-group">
-                    <label>Disabled Result</label>
-                    <select class="form-control select2" style="width: 100%;">
-                      <option selected="selected">Alabama</option>
-                      <option>Alaska</option>
-                      <option disabled="disabled">California (disabled)</option>
-                      <option>Delaware</option>
-                      <option>Tennessee</option>
-                      <option>Texas</option>
-                      <option>Washington</option>
-                    </select>
+                    <label>Telefone</label>
+                    <input type="text" name="telcob" id="telcob" class="form-control tel shadow-sm"
+                                placeholder="Digite somente os números" required>
                   </div>
                   <!-- /.form-group -->
                 </div>
                 <!-- /.col -->
               </div>
               <!-- /.row -->
-  
-              <h5>Custom Color Variants</h5>
+              
               <div class="row">
                 <div class="col-12 col-sm-6">
                   <div class="form-group">
