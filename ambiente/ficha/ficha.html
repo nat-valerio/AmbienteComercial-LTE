@@ -615,7 +615,7 @@
                   <!-- checkbox -->
                   <div class="form-group clearfix">
                     <div class="icheck-danger d-block">
-                      <input type="checkbox" checked id="checkboxDanger1">
+                      <input type="checkbox" id="checkboxDanger1">
                       <label for="checkboxDanger1">Tubo de transtorno</label>
                     </div>
                     <div class="icheck-danger d-block">
@@ -674,50 +674,64 @@
           <div class="card-body">
             <div class="row">
               <div class="col-md-6">
+                <h4 class="mb-3">Horário de funcionamento do laboratório</h4>
                 <div class="form-group">
-                  <label>Código do cliente</label>
-                  <input type="text" name="cdcliente" class="form-control shadow-sm">
-                </div>
-                <!-- /.form-group -->
+                  <label class="mr-2">Das</label>
+                  <input class="form-control hr shadow-sm mr-2 col-12 col-md-3 d-inline" type="time" name="dhora" id="das">
+
+                  <label class="mr-2">ás</label>
+                  <input class="form-control hr shadow-sm  col-12 col-md-3 d-inline" type="time" name="ashora" id="ashora">
+                </div> <!-- /.form-group -->
                 <div class="form-group">
-                  <label>Disabled</label>
-                  <select class="form-control select2" disabled="disabled" style="width: 100%;">
-                    <option selected="selected">Alabama</option>
-                    <option>Alaska</option>
-                    <option>California</option>
-                    <option>Delaware</option>
-                    <option>Tennessee</option>
-                    <option>Texas</option>
-                    <option>Washington</option>
-                  </select>
+                  <label>Melhor horário para retirada</label>
+                  <input class="form-control hr shadow-sm col-md-3" type="time" name="ashora" id="ashora">
                 </div>
                 <!-- /.form-group -->
               </div>
               <!-- /.col -->
+
               <div class="col-md-6">
                 <div class="form-group">
-                  <label>Multiple</label>
-                  <select class="select2" multiple="multiple" data-placeholder="Select a State" style="width: 100%;">
-                    <option>Alabama</option>
-                    <option>Alaska</option>
-                    <option>California</option>
-                    <option>Delaware</option>
-                    <option>Tennessee</option>
-                    <option>Texas</option>
-                    <option>Washington</option>
-                  </select>
+                  <label for="repre">Representante</label>
+                  <select id=cbRepre class="form-control select2 select2bs4 cb shadow-sm" required>
+                    <option value="repre">Selecione o representante...</option>
+                    <option value="repre1">Representante 1</option>
+                    <option value="repre2">Representante 2</option>
+                    <option value="repre3">Representante 3</option>
+                </select>
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
-                  <label>Disabled Result</label>
-                  <select class="form-control select2" style="width: 100%;">
-                    <option selected="selected">Alabama</option>
-                    <option>Alaska</option>
-                    <option disabled="disabled">California (disabled)</option>
-                    <option>Delaware</option>
-                    <option>Tennessee</option>
-                    <option>Texas</option>
-                    <option>Washington</option>
+                  <label for="regiaoh">Região</label>
+                  <select class="form-control select2-primary shadow-sm select2bs4" id="estado2" name="regiaoh" style="width: 100%;">
+                      <option value="select" selected="selected">Selecione o estado...</option>
+                      <option value="AC">AC</option>
+                      <option value="AL">AL</option>
+                      <option value="AP">AP</option>
+                      <option value="AM">AM</option>
+                      <option value="BA">BA</option>
+                      <option value="CE">CE</option>
+                      <option value="DF">DF</option>
+                      <option value="ES">ES</option>
+                      <option value="GO">GO</option>
+                      <option value="MA">MA</option>
+                      <option value="MT">MT</option>
+                      <option value="MS">MS</option>
+                      <option value="MG">MG</option>
+                      <option value="PA">PA</option>
+                      <option value="PB">PB</option>
+                      <option value="PR">PR</option>
+                      <option value="PE">PE</option>
+                      <option value="PI">PI</option>
+                      <option value="RJ">RJ</option>
+                      <option value="RN">RN</option>
+                      <option value="RS">RS</option>
+                      <option value="RO">RO</option>
+                      <option value="RR">RR</option>
+                      <option value="SC">SC</option>
+                      <option value="SP">SP</option>
+                      <option value="SE">SE</option>
+                      <option value="TO">TO</option>
                   </select>
                 </div>
                 <!-- /.form-group -->
@@ -726,39 +740,93 @@
             </div>
             <!-- /.row -->
 
-            <h5>Custom Color Variants</h5>
             <div class="row">
               <div class="col-12 col-sm-6">
                 <div class="form-group">
-                  <label>Minimal (.select2-danger)</label>
-                  <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger"
-                    style="width: 100%;">
-                    <option selected="selected">Alabama</option>
-                    <option>Alaska</option>
-                    <option>California</option>
-                    <option>Delaware</option>
-                    <option>Tennessee</option>
-                    <option>Texas</option>
-                    <option>Washington</option>
-                  </select>
+                  <label for="fatura">Faturamento estimado / Mês</label>
+                  <input type="text" class="form-control shadow-sm" name="fatura" id="fatura"
+                    required/>
                 </div>
                 <!-- /.form-group -->
               </div>
               <!-- /.col -->
               <div class="col-12 col-sm-6">
                 <div class="form-group">
-                  <label>Multiple (.select2-purple)</label>
+                  <label for="fatura"></label>
+                  <label for="centcusto">Centro de custo</label>
+                  <input type="text" class="form-control shadow-sm" name="centcusto" id="centcusto" maxlength="5"
+                      required>
+                </div>
+                <!-- /.form-group -->
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="form-group">
+                  <label for="prazo">Prazo de pagamento</label>
+                  <input type="text" class="form-control shadow-sm" name="prazo"
+                      placeholder="Digite somente os números" required>
+                </div>
+                <!-- /.form-group -->
+              </div>
+              <!-- /.col -->
+              <div class="col-12 col-sm-6">
+                <div class="form-group">
+                  <label for="fatura">Faturamento estimado / Mês</label>
                   <div class="select2-purple">
-                    <select class="select2" multiple="multiple" data-placeholder="Select a State"
-                      data-dropdown-css-class="select2-purple" style="width: 100%;">
-                      <option>Alabama</option>
-                      <option>Alaska</option>
-                      <option>California</option>
-                      <option>Delaware</option>
-                      <option>Tennessee</option>
-                      <option>Texas</option>
-                      <option>Washington</option>
-                    </select>
+                    <input type="text" class="form-control dinheiro shadow-sm" name="fatura" id="fatura"
+                    required>
+                  </div>
+                </div>
+                <!-- /.form-group -->
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="form-group">
+                  <label for="fatura">Faturamento estimado / Mês</label>
+                  <input type="text" class="form-control dinheiro shadow-sm" name="fatura" id="fatura"
+                    required/>
+                </div>
+                <!-- /.form-group -->
+              </div>
+              <!-- /.col -->
+              <div class="col-12 col-sm-6">
+                <div class="form-group">
+                  <label for="fatura">Faturamento estimado / Mês</label>
+                  <div class="select2-purple">
+                    <input type="text" class="form-control dinheiro shadow-sm" name="fatura" id="fatura"
+                    required>
+                  </div>
+                </div>
+                <!-- /.form-group -->
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="form-group">
+                  <label for="fatura">Faturamento estimado / Mês</label>
+                  <input type="text" class="form-control dinheiro shadow-sm" name="fatura" id="fatura"
+                    required/>
+                </div>
+                <!-- /.form-group -->
+              </div>
+              <!-- /.col -->
+              <div class="col-12 col-sm-6">
+                <div class="form-group">
+                  <label for="fatura">Faturamento estimado / Mês</label>
+                  <div class="select2-purple">
+                    <input type="text" class="form-control dinheiro shadow-sm" name="fatura" id="fatura"
+                    required>
                   </div>
                 </div>
                 <!-- /.form-group -->
@@ -768,11 +836,15 @@
             <!-- /.row -->
           </div>
           <!-- /.card-body -->
+
+
           <div class="card-footer">
             Visit <a href="https://select2.github.io/">Select2 documentation</a> for more examples and information
             about
             the plugin.
           </div>
+
+
         </div><!-- /.card -->
       </div><!-- /.container-fluid -->
     </div>
