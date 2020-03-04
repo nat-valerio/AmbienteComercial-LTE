@@ -801,7 +801,7 @@
 $(document).ready(function () {
   $.validator.setDefaults({
     submitHandler: function () {
-      alert( "Form successful submitted!" );
+      alert( "Formulário enviado com sucesso!" );
     }
   });
   $('#quickForm').validate({
@@ -820,12 +820,12 @@ $(document).ready(function () {
     },
     messages: {
       email: {
-        required: "Please enter a email address",
-        email: "Please enter a vaild email address"
+        required: "Insira seu e-mail",
+        email: "Insira um endereço de e-mail válido."
       },
       password: {
-        required: "Please provide a password",
-        minlength: "Your password must be at least 5 characters long"
+        required: "Insira a sua senha",
+        minlength: "Sua senha deve ter pelo menos 5 caracteres"
       },
       terms: "Please accept our terms"
     },
