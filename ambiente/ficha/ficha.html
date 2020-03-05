@@ -767,7 +767,7 @@
               <div class="col-12 col-sm-6">
                 <div class="form-group">
                   <label for="prazo">Prazo de pagamento</label>
-                  <input type="text" class="form-control shadow-sm" name="prazo"
+                  <input type="text" class="form-control data shadow-sm" name="prazo"
                       placeholder="Digite somente os números" required>
                 </div>
                 <!-- /.form-group -->
@@ -775,11 +775,9 @@
               <!-- /.col -->
               <div class="col-12 col-sm-6">
                 <div class="form-group">
-                  <label for="fatura">Faturamento estimado / Mês</label>
-                  <div class="select2-purple">
-                    <input type="text" class="form-control dinheiro shadow-sm" name="fatura" id="fatura"
-                    required>
-                  </div>
+                  <label for="fatura"></label>
+                  <label for="comentario">Comentários do representante</label>
+                  <input type="text" class="form-control shadow-sm" id="com-rep" name="comentario"/>
                 </div>
                 <!-- /.form-group -->
               </div>
@@ -790,20 +788,18 @@
             <div class="row">
               <div class="col-12 col-sm-6">
                 <div class="form-group">
-                  <label for="fatura">Faturamento estimado / Mês</label>
-                  <input type="text" class="form-control dinheiro shadow-sm" name="fatura" id="fatura"
-                    required/>
+                  <label for="btn_add">Adicionar arquivo (Consulta SPC Serasa)</label>
+                  <input type="hidden" name="MAX_FILE_SIZE" value="4194304" />
+                  <input type="file" class="form-control-file border" name="serasa" />
                 </div>
                 <!-- /.form-group -->
               </div>
               <!-- /.col -->
               <div class="col-12 col-sm-6">
                 <div class="form-group">
-                  <label for="fatura">Faturamento estimado / Mês</label>
-                  <div class="select2-purple">
-                    <input type="text" class="form-control dinheiro shadow-sm" name="fatura" id="fatura"
-                    required>
-                  </div>
+                  <label for="btn_add">Adicionar arquivo (Contrato Social )</label>
+                  <input type="hidden" name="MAX_FILE_SIZE" value="4194304" />
+                  <input type="file" class="form-control-file border" name="contrato" />
                 </div>
                 <!-- /.form-group -->
               </div>
@@ -811,29 +807,7 @@
             </div>
             <!-- /.row -->
 
-            <div class="row">
-              <div class="col-12 col-sm-6">
-                <div class="form-group">
-                  <label for="fatura">Faturamento estimado / Mês</label>
-                  <input type="text" class="form-control dinheiro shadow-sm" name="fatura" id="fatura"
-                    required/>
-                </div>
-                <!-- /.form-group -->
-              </div>
-              <!-- /.col -->
-              <div class="col-12 col-sm-6">
-                <div class="form-group">
-                  <label for="fatura">Faturamento estimado / Mês</label>
-                  <div class="select2-purple">
-                    <input type="text" class="form-control dinheiro shadow-sm" name="fatura" id="fatura"
-                    required>
-                  </div>
-                </div>
-                <!-- /.form-group -->
-              </div>
-              <!-- /.col -->
-            </div>
-            <!-- /.row -->
+
           </div>
           <!-- /.card-body -->
 
