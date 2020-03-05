@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.fundo{
+    background-image: url('laboratory.jpg');
+    background-repeat: no-repeat;
+    background-size:100%;
+    bottom: 0;
+    color: black;
+    left: 0;
+    overflow: auto;
+    padding: 3em;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+}
