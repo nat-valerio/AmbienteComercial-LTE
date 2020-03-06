@@ -70,7 +70,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <img src="../../user-color.png" class="img-circle elevation-2" alt=" Image User">
         </div>
         <div class="info">
-          <a href="perfil.html" class="d-block">Usuário</a>
+          <a href="perfil.html" class="d-block">Meu perfil</a>
         </div>
       </div>
 
@@ -100,6 +100,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </li>
 
           <li class="nav-item">
+            <a href="../editaFicha/editar.html" class="nav-link">
+              <i class="nav-icon fas fa-clipboard-check"></i>
+              <p>
+                Finalizar ficha
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
             <a href="../tabela/tabela.html" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
               <p>
@@ -110,7 +119,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
           <li class="nav-item">
             <a href="../logout/logout.php" class="nav-link">
-              <i class="fas fa-sign-out-alt"></i>
+              <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>
                 Sair
               </p>
@@ -147,67 +156,81 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Main content -->
     <div class="content">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+        <!-- SELECT2 EXAMPLE -->
+        <div class="card card-primary">
+          <div class="card-header">
+            <h3 class="card-title">Select2 (Default Theme)</h3>
 
-                <p class="card-text">
-                  Aí ela me deu esse punhal e mandou eu sangra os cabras.
-                </p>
-
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
+              <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-remove"></i></button>
             </div>
-
-            <div class="card card-primary card-outline">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-
-                <p class="card-text">
-                  Aí ela me deu esse punhal e mandou eu sangra os cabras.
-                </p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+          </div> <!-- /.card-header -->
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <p>Nome do usuário <!--php--></p>
+                </div>
+                <!-- /.form-group -->
+                <div class="form-group">
+                  <p>Telefone: <!--php--></p>
+                </div>
+                <!-- /.form-group -->
               </div>
-            </div><!-- /.card -->
+              <!-- /.col -->
+              <div class="col-md-6">
+                <div class="form-group">
+                  <p>E-mail: <!--php--></p>
+                </div>
+                <!-- /.form-group -->
+                <div class="form-group">
+                  <p></p>
+                  <p>Função: <!--php--></p>
+                <!-- /.form-group -->
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="form-group">
+                  <button></button>
+                </div>
+                <!-- /.form-group -->
+              </div>
+              <!-- /.col -->
+              <div class="col-12 col-sm-6">
+                <div class="form-group">
+                  <label>Multiple (.select2-purple)</label>
+                  <div class="select2-purple">
+                    <select class="select2" multiple="multiple" data-placeholder="Select a State" data-dropdown-css-class="select2-purple" style="width: 100%;">
+                      <option>Alabama</option>
+                      <option>Alaska</option>
+                      <option>California</option>
+                      <option>Delaware</option>
+                      <option>Tennessee</option>
+                      <option>Texas</option>
+                      <option>Washington</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- /.form-group -->
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
           </div>
-          <!-- /.col-md-6 -->
-          <div class="col-lg-6">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="m-0">Hallo</h5>
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">Kronk</h6>
-
-                <p class="card-text">Aí ela me deu esse punhal e mandou eu sangra os cabras.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-
-            <div class="card card-primary card-outline">
-              <div class="card-header">
-                <h5 class="m-0">Featured</h5>
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">Special title treatment</h6>
-
-                <p class="card-text">Aí ela me deu esse punhal e mandou eu sangra os cabras.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
+          <!-- /.card-body -->
+          <div class="card-footer">
+            Visit <a href="https://select2.github.io/">Select2 documentation</a> for more examples and information about
+            the plugin.
           </div>
-          <!-- /.col-md-6 -->
-        </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+        </div> <!-- /.card -->
+      </div> <!-- /.container-fluid -->
+    </div> <!-- /.content -->
+  </div> <!-- /.content-wrapper -->
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
