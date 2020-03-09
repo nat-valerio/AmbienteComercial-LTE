@@ -1,3 +1,17 @@
+<?php
+  include('conn.php') ;
+
+  $idficha = $_POST['idficha'];
+  $cdcliente = $_POST['cdcliente'];
+  $nfantasia = $_POST['nfantasia'];
+  //$status = $_POST['status'];
+
+  $sql = "SELECT idficha, cdcliente, nfantasia FROM cdficha 
+    WHERE idficha='$idficha', cdcliente='$cdcliente', nfantasia='$nfantasia'";
+
+  $result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -28,17 +42,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <div class="wrapper">
 
     <!-- Navbar -->
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <nav class="main-header navbar navbar-expand navbar-dark navbar-primary">
       <!-- Left navbar links -->
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="starter.html" class="nav-link">Dashboard</a>
+          <a href="starter.php" class="nav-link">Dashboard</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="../contato/contato.html" class="nav-link">Contato</a>
+          <a href="../contato/contato.php" class="nav-link">Contato</a>
         </li>
       </ul>
 
@@ -59,7 +73,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
-      <a href="starter.html" class="brand-link">
+      <a href="starter.php" class="brand-link">
         <img src="../../dist/img/Logo_Bolinha_Transparente.png" alt="Laboratório Maricondi logo" class="brand-image"
           style="opacity: .8">
         <span class="brand-text font-weight-light">
@@ -76,7 +90,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <img src="../../user-color.png" class="img-circle elevation-2" alt=" Image User">
           </div>
           <div class="info">
-            <a href="../perfil/perfil.html" class="d-block">Usuário</a>
+            <a href="../perfil/perfil.php" class="d-block">Usuário</a>
           </div>
         </div>
 
@@ -87,7 +101,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                with font-awesome or any other icon font library -->
 
             <li class="nav-item">
-              <a href="../../starter.html" class="nav-link">
+              <a href="../../starter.php" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                   Dashboard
@@ -97,7 +111,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </li>
 
             <li class="nav-item">
-              <a href="../ficha/ficha.html" class="nav-link">
+              <a href="../ficha/ficha.php" class="nav-link">
                 <i class="nav-icon fas fa-edit"></i>
                 <p>
                   Ficha Cadastral
@@ -106,16 +120,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </li>
 
             <li class="nav-item">
-                <a href="../editaFicha/editar.html" class="nav-link">
-                  <i class="nav-icon fas fa-clipboard-check"></i>
-                  <p>
-                    Finalizar ficha
-                  </p>
-                </a>
-              </li>
+              <a href="../editaFicha/editar.php" class="nav-link">
+                <i class="nav-icon fas fa-clipboard-check"></i>
+                <p>
+                  Finalizar ficha
+                </p>
+              </a>
+            </li>
 
             <li class="nav-item">
-              <a href="../tabela/tabela.html" class="nav-link">
+              <a href="../tabela/tabela.php" class="nav-link">
                 <i class="nav-icon fas fa-table"></i>
                 <p>
                   Tabela de preços
@@ -124,7 +138,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </li>
 
             <li class="nav-item">
-              <a href="../logout/logout.html" class="nav-link">
+              <a href="../logout/logout.php" class="nav-link">
                 <i class="nav-icon fas fa-sign-out-alt"></i>
                 <p>
                   Sair
@@ -146,12 +160,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0 text-dark">Tabela de Preços</h1>
+              <h1 class="m-0 text-dark">Finalizar ficha</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-                <li class="breadcrumb-item active">Tabela de Preços</li>
+                <li class="breadcrumb-item active">Finalizar ficha</li>
               </ol>
             </div><!-- /.col -->
           </div><!-- /.row -->
@@ -164,7 +178,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <div class="col-12">
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Exames</h3>
+                <h3 class="card-title">Finalizar ficha</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -172,25 +186,37 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <!--THEAD-->
                   <thead>
                     <tr>
-                      <th>Início</th>
-                      <th>Exame</th>
-                      <th>Descrição</th>
-                      <th>Tipo</th>
-                      <th>Valor (R$)</th>
+                      <th>ID da ficha</th>
+                      <th>Código do cliente</th>
+                      <th>Nome da laboratório</th>
+                      <th>Status</th>
+                      <th>Gerenciar</th>
                     </tr>
                   </thead>
                   <!--./THEAD-->
 
                   <!--TBODY-->
                   <tbody>
-                    <tr>
-                      <td>LELE</td>
-                      <td>Internet Explorer 4.0</td>
-                      <td>Win 95+</td>
-                      <td> 4</td>
-                      <td>X</td>
-                    </tr>
-
+                    <?php
+                    if($result->num_rows > 0){
+                      
+                      while($linha = $result->fetch_assoc()){
+                        var_dump($linha);
+                          echo "<tr>";
+                              echo "<td>" . $linha['idficha']."</td>";
+                              echo "<td>".$linha['cdcliente']."</td>";
+                              echo "<td>".$linha['nfantasia']."</td>";
+                              //echo "<td>".$linha['status']."</td>";
+                              echo "<td><a href='#?idficha= ".$linha['idficha']. "'>Editar </a> | ";
+                              echo "<a href='#?idficha=" . $linha['idficha'] . "'>Apagar</a></td> |";
+                              echo "<a href='#?idficha=" . $linha['idficha'] . "'>Finalizar</a></td> ";
+                          echo "</tr>";
+                      }
+                    }
+                    else{
+                        echo "Nenhum resultado";
+                    }
+                ?>
                   </tbody>
 
                 </table>

@@ -1,3 +1,11 @@
+<?php
+  include('conn.php') ;
+  include('functions.php');
+
+  $sql = "SELECT * FROM preco";
+  $result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -28,7 +36,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <div class="wrapper">
 
     <!-- Navbar -->
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <nav class="main-header navbar navbar-expand navbar-dark navbar-primary">
       <!-- Left navbar links -->
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -63,7 +71,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <img src="../../dist/img/Logo_Bolinha_Transparente.png" alt="Laboratório Maricondi logo" class="brand-image"
           style="opacity: .8">
         <span class="brand-text font-weight-light">
-          <!--<img src="dist/img/Logo_Letras.png" alt="Laboratório Maricondi logo" class="brand-image">-->
           Laboratório Maricondi
         </span>
       </a>
@@ -76,7 +83,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <img src="../../user-color.png" class="img-circle elevation-2" alt=" Image User">
           </div>
           <div class="info">
-            <a href="../perfil/perfil.html" class="d-block">Usuário</a>
+            <a href="../perfil/perfil.php" class="d-block">Usuário</a>
           </div>
         </div>
 
@@ -87,7 +94,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                with font-awesome or any other icon font library -->
 
             <li class="nav-item">
-              <a href="../../starter.html" class="nav-link">
+              <a href="../../starter.php" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                   Dashboard
@@ -97,7 +104,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </li>
 
             <li class="nav-item">
-              <a href="../ficha/ficha.html" class="nav-link">
+              <a href="../ficha/ficha.php" class="nav-link">
                 <i class="nav-icon fas fa-edit"></i>
                 <p>
                   Ficha Cadastral
@@ -106,7 +113,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </li>
 
             <li class="nav-item">
-              <a href="../editaFicha/editar.html" class="nav-link">
+              <a href="../editaFicha/editar.php" class="nav-link">
                 <i class="nav-icon fas fa-clipboard-check"></i>
                 <p>
                   Finalizar ficha
@@ -115,7 +122,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </li>
 
             <li class="nav-item">
-              <a href="../tabela/tabela.html" class="nav-link">
+              <a href="../tabela/tabela.php" class="nav-link">
                 <i class="nav-icon fas fa-table"></i>
                 <p>
                   Tabela de preços
@@ -124,7 +131,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </li>
 
             <li class="nav-item">
-              <a href="../logout/logout.html" class="nav-link">
+              <a href="../logout/logout.php" class="nav-link">
                 <i class="nav-icon fas fa-sign-out-alt"></i>
                 <p>
                   Sair
@@ -183,14 +190,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                   <!--TBODY-->
                   <tbody>
+                    <!-- Da erro no result->fetch_assoc -->
+                    <?php
+                        if ($result->num_rows > 0) {
+                          while ($row = $result->fetch_assoc()) { ?>
                     <tr>
-                      <td>LELE</td>
-                      <td>Internet Explorer 4.0</td>
-                      <td>Win 95+</td>
-                      <td> 4</td>
-                      <td>X</td>
+                      <td scope="col"><?php echo $row['inicio']; ?></td>
+                      <td scope="col"><?php echo $row['exame']; ?></td>
+                      <td scope="col"><?php echo $row['descricao']; ?></td>
+                      <td scope="col"><?php echo $row['tipo']; ?></td>
+                      <td scope="col"><?php echo $row['valor']; ?></td>
                     </tr>
-
+                    
+                    <?php }
+                      } else {
+                          echo "Nenhum resultado encontrado.";
+                        }
+                    ?>
                   </tbody>
 
                 </table>
@@ -231,6 +247,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- REQUIRED SCRIPTS -->
 
+  <script>
+        $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
   <!-- jQuery -->
   <script src="../../plugins/jquery/jquery.min.js"></script>
   <!-- Bootstrap 4 -->
@@ -243,6 +270,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- AdminLTE for demo purposes -->
   <script src="../../dist/js/demo.js"></script>
   <!-- page script -->
+  <script type="text/javascript" src="functions.php"></script>
   <script>
     $(function () {
       $("#example1").DataTable();
