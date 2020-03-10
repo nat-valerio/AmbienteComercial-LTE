@@ -210,7 +210,7 @@
 
                     <div class="form-group">
                       <label for="rsocial">Razão social</label>
-                      <input type="text" name="rsocial" id="razao" class="form-control shadow-sm">
+                      <input type="text" name="rsocial" id="rsocial" class="form-control shadow-sm">
                     </div>
                     <!-- /.form-group -->
                   </div>
@@ -381,39 +381,44 @@
               <div class="card-body">
                 <div class="row">
 
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="nomec">Nome completo</label>
-                      <input type="text" class="form-control maiuscula shadow-sm" name="nomec" id="nome-comp1" required>
-                    </div>
-                    <!-- /.form-group -->
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="nomec">Nome completo</label>
+                        <input type="text" class="form-control maiuscula shadow-sm" name="nomec" id="nome-comp1" required>
+                      </div>
+                      <!-- /.form-group -->
 
-                    <div class="form-group">
-                      <label>E-mail</label>
-                      <input type="email" name="emailc" id="email1" class="form-control shadow-sm" required>
+                      <div class="form-group">
+                        <label>E-mail</label>
+                        <input type="email" name="emailc" id="email1" class="form-control shadow-sm" required>
+                      </div>
+                      <!-- /.form-group -->
                     </div>
-                    <!-- /.form-group -->
-                  </div>
 
-                  <!-- /.col -->
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="celc">Celular</label>
-                      <input type="text" class="form-control cel shadow-sm" name="celc" id="celular1"
-                        placeholder="Digite somente os números" required>
+                    <!-- /.col -->
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="celc">Celular</label>
+                        <input type="text" class="form-control cel shadow-sm" name="celc" id="celular1"
+                          placeholder="Digite somente os números" required>
+                      </div>
+                      <!-- /.form-group -->
+                      <div class="form-group">
+                        <label for="func">Função</label>
+                        <input type="text" name="rsocial" id="razao" class="form-control shadow-sm">
+                      </div>
+                      <!-- /.form-group -->
                     </div>
-                    <!-- /.form-group -->
-                    <div class="form-group">
-                      <label for="func">Função</label>
-                      <input type="text" name="rsocial" id="razao" class="form-control shadow-sm">
-                    </div>
-                    <!-- /.form-group -->
+                    <!-- /.col -->
                   </div>
-                  <!-- /.col -->
+                  <!-- /.row -->
+                  <div>
+                  <div class="card-footer">
+                    <button name="btn_salva" class="btn btn-lg btn-outline-success mr-4" type="submit">Adicionar contato</button>
                 </div>
-                <!-- /.row -->
-              </div> <!-- /.card-body -->
-            </div><!-- /.card -->
+                  </div>
+                </div> <!-- /.card-body -->
+              </div><!-- /.card -->
 
             <!-- SELECT2 COBRANÇA -->
             <div class="card card-primary">
@@ -808,11 +813,13 @@
               </div>
               <!-- /.card-body -->
 
-            </div><!-- /.card -->
-
-            <div>
+              <div>
               <button name="btn_salva" class="btn btn-lg btn-outline-success mr-4" type="submit">SALVAR</button>
             </div>
+
+            </div><!-- /.card -->
+
+
           </form>
         </div><!-- /.container-fluid -->
       </div>
@@ -836,7 +843,7 @@
       <div class="float-right d-none d-sm-inline">
         Anything you want
       </div>
-      <!-- Default to the left -->
+      <!-- NAO RETIRAR-->
       <strong>Copyright &copy; 2020 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
     </footer>
   </div>

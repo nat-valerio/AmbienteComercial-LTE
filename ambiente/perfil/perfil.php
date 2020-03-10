@@ -1,8 +1,20 @@
+<?php
+    include('conn.php');
+    session_start();
+    //$id = $_SESSION['id'];
+
+    $nome = $_POST['nome'];
+    //$idusuario = $_POST['idusuario'];
+
+    $sql = "SELECT * FROM cdusuario";
+    $resultado = $conn->query($sql);
+    if($resultado->num_rows == 1){
+        while($linha = $resultado->fetch_assoc()){
+            $nome = $linha['nome'];
+        }
+    }
+?>
 <!DOCTYPE html>
-<!--
-This is a starter template page. Use this page to start your new project from
-scratch. This page gets rid of all links and provides the needed markup only.
--->
 <html lang="pt-br">
 
 <head>
@@ -175,13 +187,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <p>Nome do usuário
+                    <p>Nome do usuário: <?php echo $nome;?>
                       <!--php-->
                     </p>
                   </div>
                   <!-- /.form-group -->
                   <div class="form-group">
-                    <p>Telefone:
+                    <p>Telefone: <?php echo $telefone;?>
                       <!--php-->
                     </p>
                   </div>
@@ -190,14 +202,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <!-- /.col -->
                 <div class="col-md-6">
                   <div class="form-group">
-                    <p>E-mail:
+                    <p>E-mail: <?php echo $email;?>
                       <!--php-->
                     </p>
                   </div>
                   <!-- /.form-group -->
                   <div class="form-group">
                     <p></p>
-                    <p>Função:
+                    <p>Função: <?php echo $funcao; ?>
                       <!--php-->
                     </p>
                     <!-- /.form-group -->
