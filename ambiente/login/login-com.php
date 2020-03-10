@@ -26,7 +26,7 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">Faça login para iniciar sua sessão</p>
 
-      <form action="../../index3.html" method="post">
+      <form action="select.php" method="post">
         <div class="input-group mb-3">
           <input type="email" class="form-control" placeholder="Insira o seu usuário...">
           <div class="input-group-append">

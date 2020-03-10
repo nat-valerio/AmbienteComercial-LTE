@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--
-This is a starter template page. Use this page to start your new project from
-scratch. This page gets rid of all links and provides the needed markup only.
--->
 <html lang="pt-br">
 
 <head>
@@ -76,7 +72,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <img src="user-color.png" class="img-circle elevation-2" alt=" Image User">
           </div>
           <div class="info">
-            <a href="ambiente/perfil/perfil.html" class="d-block">Usuário</a>
+            <a href="ambiente/perfil/perfil.php" class="d-block">Usuário</a>
           </div>
         </div>
 
@@ -87,7 +83,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                with font-awesome or any other icon font library -->
 
             <li class="nav-item">
-              <a href="starter.html" class="nav-link">
+              <a href="starter.php" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                   Dashboard
@@ -97,7 +93,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </li>
 
             <li class="nav-item">
-              <a href="ambiente/ficha/ficha.html" class="nav-link">
+              <a href="ambiente/ficha/ficha.php" class="nav-link">
                 <i class="nav-icon fas fa-edit"></i>
                 <p>
                   Ficha Cadastral
@@ -106,7 +102,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </li>
 
             <li class="nav-item">
-              <a href="ambiente/editaFicha/editar.html" class="nav-link">
+              <a href="ambiente/editaFicha/editar.php" class="nav-link">
                 <i class="nav-icon fas fa-clipboard-check"></i>
                 <p>
                   Finalizar ficha
@@ -115,7 +111,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </li>
 
             <li class="nav-item">
-              <a href="ambiente/tabela/tabela.html" class="nav-link">
+              <a href="ambiente/tabela/tabela.php" class="nav-link">
                 <i class="nav-icon fas fa-table"></i>
                 <p>
                   Tabela de preços
@@ -169,7 +165,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="col-12">
                 <div class="card card-primary">
                   <div class="card-header">
-                    <h3 class="card-title">Últimas fichas cadastradas</h3>
+                    <h2 class="card-title">Últimas fichas cadastradas</h2>
                   </div>
                   <!-- /.card-header -->
                   <div class="card-body">
@@ -191,8 +187,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           <td>LELE</td>
                           <td>Internet Explorer 4.0</td>
                           <td>Win 95+</td>
-                          <td> 4</td>
-                          <td>X</td>
+                          <td>4</td>
                         </tr>
 
                       </tbody>
@@ -215,16 +210,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </div>
     <!-- /.content-wrapper -->
 
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-      <!-- Control sidebar content goes here -->
-      <div class="p-3">
-        <h5>Title</h5>
-        <p>Sidebar content</p>
-      </div>
-    </aside>
-    <!-- /.control-sidebar -->
-
     <!-- Main Footer -->
     <footer class="main-footer">
       <!-- To the right -->
@@ -232,7 +217,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         Anything you want
       </div>
       <!-- Default to the left -->
-      <strong>Copyright &copy; 2020 <a href="https://adminlte.io">BlacKat</a>.</strong> All rights reserved.
+      <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
     </footer>
   </div>
   <!-- ./wrapper -->

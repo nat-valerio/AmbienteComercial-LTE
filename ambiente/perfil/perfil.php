@@ -209,10 +209,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="col-md-6">
                   <button type="button" class="btn btn-lg btn-outline-success mr-4">Sair</button>
                 </div>
-
+      
               </div> <!-- /.card-body -->
             </div>
           </div> <!-- /.card -->
+  
+
         </div> <!-- /.container-fluid -->
       </div> <!-- /.content -->
     </div> <!-- /.content-wrapper -->

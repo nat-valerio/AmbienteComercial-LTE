@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--
-This is a starter template page. Use this page to start your new project from
-scratch. This page gets rid of all links and provides the needed markup only.
--->
 <html lang="pt-br">
 
 <head>
@@ -89,7 +85,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                   Dashboard
-                  <!--<span class="right badge badge-danger">New</span>-->
                 </p>
               </a>
             </li>
@@ -188,17 +183,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       </div>
                     </div>
                   </div>
-                    <!--
-                  <div class="card-footer">
-                    <div class="text-right">
-                      <a href="#" class="btn btn-sm bg-teal">
-                        <i class="fas fa-comments"></i>
-                      </a>
-                      <a href="#" class="btn btn-sm btn-primary">
-                        <i class="fas fa-user"></i> View Profile
-                      </a>
-                    </div>
-                  </div>  ./card-footer -->
 
                 </div>
               </div>
@@ -225,18 +209,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       </div>
                     </div>
                   </div>
-
-                  <div class="card-footer">
-                    <div class="text-right">
-                      <a href="#" class="btn btn-sm bg-teal">
-                        <i class="fas fa-comments"></i>
-                      </a>
-                      <a href="#" class="btn btn-sm btn-primary">
-                        <i class="fas fa-user"></i> View Profile
-                      </a>
-                    </div>
-                  </div><!-- ./car-footer -->
-
                 </div>
               </div>
 
@@ -261,19 +233,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </div>
                   </div>
 
-                  <div class="card-footer">
-                    <div class="text-right">
-                      <a href="#" class="btn btn-sm bg-teal">
-                        <i class="fas fa-comments"></i>
-                      </a>
-                      <a href="#" class="btn btn-sm btn-primary">
-                        <i class="fas fa-user"></i> View Profile
-                      </a>
-                    </div>
-                  </div><!-- ./card-footer -->
-
                 </div>
               </div>
+              
               <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
                 <div class="card bg-light">
                   <div class="card-header text-muted border-bottom-0">
@@ -294,17 +256,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       </div>
                     </div>
                   </div>
-
-                  <div class="card-footer">
-                    <div class="text-right">
-                      <a href="#" class="btn btn-sm bg-teal">
-                        <i class="fas fa-comments"></i>
-                      </a>
-                      <a href="#" class="btn btn-sm btn-primary">
-                        <i class="fas fa-user"></i> View Profile
-                      </a>
-                    </div> <!--./text-right-->
-                  </div> <!-- ./CARD-FOOTER -->
 
                 </div> <!--./card-light-->
               </div> <!--./col-->

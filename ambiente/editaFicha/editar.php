@@ -206,7 +206,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                               echo "<td>" . $linha['idficha']."</td>";
                               echo "<td>".$linha['cdcliente']."</td>";
                               echo "<td>".$linha['nfantasia']."</td>";
-                              //echo "<td>".$linha['status']."</td>";
+                              echo "<td>".$linha['status']."</td>";
                               echo "<td><a href='#?idficha= ".$linha['idficha']. "'>Editar </a> | ";
                               echo "<a href='#?idficha=" . $linha['idficha'] . "'>Apagar</a></td> |";
                               echo "<a href='#?idficha=" . $linha['idficha'] . "'>Finalizar</a></td> ";
